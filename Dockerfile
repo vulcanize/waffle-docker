@@ -1,19 +1,10 @@
-FROM node:latest
-RUN npm install --silent -g npx
+FROM node:11.10.1
+
+ADD . /go/src/github.com/vulcanize/waffle_docker
+WORKDIR /go/src/github.com/vulcanize/waffle_docker
+RUN npm install --save-dev npx
 RUN npm install --save-dev ethereum-waffle
 
 ARG CONFIG_FILE="./environments/example.json"
-ARG USER="vdm"
 
-RUN adduser -Du 5000 $USER
-WORKDIR /app
-RUN chown $USER /app
-USER $USER
-
-COPY --chown=5000:5000 --from=builder /go/src/github.com/vulcanize/waffle_docker/$CONFIG_FILE config.json
-COPY --chown=5000:5000 --from=builder /go/src/github.com/vulcanize/waffle_docker/startup_script.sh .
-
-# keep binaries immutable
-COPY --from=builder /go/src/github.com/vulcanize/waffle_docker/environments environments
-
-ENTRYPOINT ["/app/startup_script.sh"]
+ENTRYPOINT /usr/local/bin/npx waffle $CONFIG_FILE

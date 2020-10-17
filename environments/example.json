@@ -1,14 +1,5 @@
 {
-  "sourceDirectory": "./environment/source/",
-  "outputDirectory": "./environment/output/",
-  "nodeModulesDirectory": "./node_modules",
-  "compilerType": "solcjs",
   "compilerVersion": "./node_modules/@eth-optimism/solc",
-  "compilerOptions": {
-    "outputSelection": {
-      "*": {
-        "*": ["*"]
-      }
-    }
-  }
+  "sourceDirectory": "./contracts",
+  "outputDirectory": "./build"
 }
