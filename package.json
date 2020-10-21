@@ -4,12 +4,12 @@
     "waffle",
     "docker"
   ],
-  "homepage": "https://github.com/vulcanize/waffle_docker#readme",
+  "homepage": "https://github.com/vulcanize/waffle-docker#readme",
   "license": "MIT",
   "author": "Vulcanize Inc",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vulcanize/waffle_docker.git"
+    "url": "https://github.com/vulcanize/waffle-docker.git"
   },
   "devDependencies": {
     "@eth-optimism/solc": "0.5.16-alpha.0",

@@ -1,7 +1,7 @@
 FROM node:11.10.1
 
-ADD . /go/src/github.com/vulcanize/waffle_docker
-WORKDIR /go/src/github.com/vulcanize/waffle_docker
+ADD . /go/src/github.com/vulcanize/waffle-docker
+WORKDIR /go/src/github.com/vulcanize/waffle-docker
 RUN npm install --save-dev npx
 RUN npm install --save-dev ethereum-waffle
 
