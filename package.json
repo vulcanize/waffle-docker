@@ -13,7 +13,8 @@
   },
   "devDependencies": {
     "@eth-optimism/solc": "0.5.16-alpha.0",
-    "ethereum-waffle": "^2.5.0",
+    "ethereum-waffle": "^2.5.1",
+    "npx": "^10.2.2",
     "solc": "0.5.16"
   },
   "publishConfig": {
